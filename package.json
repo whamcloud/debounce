@@ -1,5 +1,5 @@
 {
-  "name": "debounce",
+  "name": "intel-debounce",
   "version": "1.0.0",
   "description": "Module to debounce changes",
   "main": "debounce.js",
