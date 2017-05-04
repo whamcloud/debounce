@@ -1,8 +1,9 @@
-node_modules
-.idea
-.babelrc
 .eslintignore
 .editorconfig
-.eslintrc.js
-.jscsrc
+.eslintrc
 .flowconfig
+.babelrc
+.gitignore
+*.log
+/test
+/coverage

@@ -1,24 +1,21 @@
 /* @flow */
 
-export default function debounce (fn: Function, wait: number, immediate: Boolean): Function {
+export default (fn: (any[]) => mixed, wait: number, immediate: Boolean) => {
   let timeout;
 
-  return function debounceTick (): void {
-    const args = arguments;
+  return (...args: any[]): void => {
     const callNow = immediate && !timeout;
 
     clearTimeout(timeout);
 
     timeout = setTimeout(later, wait);
 
-    if (callNow)
-      fn(...args);
+    if (callNow) fn(...args);
 
-    function later (): void {
+    function later(): void {
       timeout = null;
 
-      if (!immediate)
-        fn(...args);
+      if (!immediate) fn(...args);
     }
   };
-}
+};
