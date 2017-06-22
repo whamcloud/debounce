@@ -43,7 +43,7 @@
     "eslint-config-prettier": "2.2.0",
     "eslint-plugin-flowtype": "2.33.0",
     "eslint-plugin-import": "2.5.0",
-    "eslint-plugin-prettier": "2.1.0",
+    "eslint-plugin-prettier": "2.1.2",
     "flow-bin": "0.48.0",
     "jest": "19.0.2",
     "pre-commit": "1.2.2",
