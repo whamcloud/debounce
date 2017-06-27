@@ -47,7 +47,7 @@
     "flow-bin": "0.48.0",
     "jest": "19.0.2",
     "pre-commit": "1.2.2",
-    "prettier": "1.4.0"
+    "prettier": "1.5.0"
   },
   "author": "MFL Team",
   "license": "MIT"
