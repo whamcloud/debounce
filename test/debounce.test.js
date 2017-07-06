@@ -1,5 +1,5 @@
 import debounce from '../debounce';
-import { flow, invokeMethod } from '@mfl/fp';
+import { flow, invokeMethod } from '@iml/fp';
 
 import { describe, beforeEach, it, expect, jasmine } from './jasmine.js';
 

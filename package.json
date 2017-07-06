@@ -1,5 +1,5 @@
 {
-  "name": "@mfl/debounce",
+  "name": "@iml/debounce",
   "version": "1.0.1",
   "description": "Module to debounce changes",
   "main": "debounce.js",
@@ -29,13 +29,13 @@
       "/test"
     ],
     "transformIgnorePatterns": [
-      "/node_modules/(?!@mfl)/"
+      "/node_modules/(?!@iml)/"
     ]
   },
   "devDependencies": {
-    "@mfl/flow-jasmine": "1.6.1",
-    "@mfl/fp": "8.0.2",
-    "@mfl/jasmine-n-matchers": "2.1.1",
+    "@iml/flow-jasmine": "1.6.1",
+    "@iml/fp": "8.0.3",
+    "@iml/jasmine-n-matchers": "2.1.1",
     "babel-eslint": "7.2.3",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-env": "1.5.0",
@@ -49,6 +49,6 @@
     "pre-commit": "1.2.2",
     "prettier": "1.4.0"
   },
-  "author": "MFL Team",
+  "author": "IML Team",
   "license": "MIT"
 }
