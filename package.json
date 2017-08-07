@@ -1,6 +1,6 @@
 {
   "name": "@iml/debounce",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module to debounce changes",
   "main": "debounce.js",
   "scripts": {
