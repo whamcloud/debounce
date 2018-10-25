@@ -4,17 +4,13 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
-export default (
-  fn: (any[]) => mixed,
-  wait: number,
-  immediate?: boolean = false
-) => {
-  let timeout;
+export default (fn: (any[]) => mixed, wait: number, immediate?: boolean = false) => {
+  let timeout: ?TimeoutID;
 
   return (...args: any[]): void => {
     const callNow = immediate && !timeout;
 
-    clearTimeout(timeout);
+    if (timeout != null) clearTimeout(timeout);
 
     timeout = setTimeout(later, wait);
 
