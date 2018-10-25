@@ -1,16 +1,28 @@
+sudo: required
 language: node_js
 node_js:
-- 8
-cache: yarn
-script:
-- yarn run eslint
-- yarn run flow
-- yarn run cover
-deploy:
-  provider: npm
-  email: joe.grund@intel.com
-  api_key:
-    secure: WWGyMHJ8//crNoHv7gpMdf6xovKxIuD+v9I5qUuOqP9lYP+v+ymuaSY/0auGHylJeFm27VQ8UfN9eyEFCSJLEtoHaz5Pn6VRFEHKgIMYz4hhTOqwt6QnvEPg8zdKYzoTig1DR5r/k1cowITTigTECKgqcnXviS+rr/xEIVfk/IVE97BnA88z118J1T8l1+vX4Q1D9BICo0GFUD+vRlAIv+IomRIlh6DmTN+jiGPnB0dMcjmrfpcrMO7vX4dOtnxaaY1bCgrJoMXWDHyLy1ur9Eypx2TcXvmfMIlhzHgzUiFzlTnYkKJuEdnGEjrJ4n3N7nc5D9uJ9aSfP3aJ1cqna5bFLy/yezTLC5ZOoa2bhMEqfEZz80Et+HsXA2Nae9MrNwcqF3EYzqhnPBHCMnButWKX6Dwz5pwYy+37fG8S3Ep8VMXFKefLe2Zkv9T9YFlEaLUelgbes6lNuxzpFgtdWy7H0IlMnNlYPJxNa3gt/BgZWyFgsdY0Stf5QGblbmHd/oSQ+uGM0JZjShjxfsIXNz5RNEnaUGkiUClEDhAob59XxyUEcCPJzgsu+zf9eyt7POrgmrqr0LlP9R9yNKR8AeV+B95yJUv5EF6RZTn7h/mCivc+RAiPEFhGDggffwlZD/xg5w7fAgmTYguMeM0B9dcrj2F0e71f2F6Ka3ELJPQ=
-  on:
-    tags: true
-    repo: intel-hpdd/debounce
+  - "6"
+cache:
+  directories:
+    - "node_modules"
+jobs:
+  include:
+    - stage: test
+      name: "Lint & Test"
+      script:
+        - npm run flow
+        - npm run eslint
+        - npm run test
+    - stage: deploy-npm
+      name: "npm Deploy"
+      script: skip
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_key: "$NPM_TOKEN"
+        on:
+          all_branches: true
+stages:
+  - test
+  - name: deploy-npm
+    if: branch =~ ^v\d+\.\d+\.\d+$

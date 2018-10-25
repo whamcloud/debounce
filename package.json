@@ -1,12 +1,12 @@
 {
   "name": "@iml/debounce",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Module to debounce changes",
   "main": "debounce.js",
   "scripts": {
     "eslint": "eslint ./",
     "test": "jest",
-    "cover": "NODE_ENV=test yarn test -- --coverage",
+    "cover": "NODE_ENV=test npm test -- --coverage",
     "flow": "flow"
   },
   "publishConfig": {
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:intel-hpdd/debounce.git"
+    "url": "git@github.com:whamcloud/debounce.git"
   },
   "jest": {
     "resetMocks": true,
@@ -32,22 +32,23 @@
       "/node_modules/(?!@iml)/"
     ]
   },
+  "files": [
+    "debounce.js"
+  ],
   "devDependencies": {
-    "@iml/flow-jasmine": "1.6.1",
-    "@iml/fp": "8.0.3",
-    "@iml/jasmine-n-matchers": "2.1.1",
-    "babel-eslint": "7.2.3",
-    "babel-plugin-transform-flow-strip-types": "6.22.0",
-    "babel-preset-env": "^1.6.0",
-    "eslint": "^4.4.0",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-flowtype": "^2.35.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-prettier": "2.2.0",
-    "flow-bin": "^0.53.0",
-    "jest": "19.0.2",
-    "pre-commit": "1.2.2",
-    "prettier": "^1.5.3"
+    "@iml/flow-jasmine": "^1.6.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-flowtype": "^3.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "flow-bin": "^0.84.0",
+    "jest": "^23.6.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.14.3"
   },
   "author": "IML Team",
   "license": "MIT"

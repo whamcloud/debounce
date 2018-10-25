@@ -1,7 +1,6 @@
 # debounce
 
-[![Build Status](https://travis-ci.org/intel-hpdd/debounce.svg?branch=master)](https://travis-ci.org/intel-hpdd/debounce)
-[![Greenkeeper badge](https://badges.greenkeeper.io/intel-hpdd/debounce.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/whamcloud/debounce.svg?branch=master)](https://travis-ci.org/whamcloud/debounce)
 
 Module to debounce changes
 
